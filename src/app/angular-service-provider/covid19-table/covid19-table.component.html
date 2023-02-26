@@ -1,0 +1,45 @@
+<div class="bg-primary text-left text-white p-2">
+    Covid-19: Good Job, US!!! Dummy Data
+</div>
+<table class="table table-sm table-bordered table-striped">
+    <thead>
+        <tr><th></th><th>Confirmed</th><th>recovered</th><th>deaths</th><th>state</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getRealData(); let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item.confirmed}}</td>
+            <td>{{item.recovered}}</td>
+            <td>{{item.deaths}}</td>
+            <td>{{item.state}}</td>
+        </tr>
+    </tbody>    
+</table>
+
+<form>
+
+    <div class="form-group">
+        <label>Name1</label>
+        <input class="form-control" 
+            #nameInputRef
+            name="name" (input)="name1 = $event.target.value" [value] = "name1"/>
+    </div>
+    <div class="form-group">
+        <label>Name1</label>
+        <input class="form-control" 
+            name="category" (input)="name1 = $event.target.value" [value] = "name1" />
+    </div>
+
+
+    <div class="form-group">
+        <label>Name2</label>
+        <input class="form-control" 
+            #nameInputRef
+            name="name" [(ngModel)]="name2" />
+    </div>
+    <div class="form-group">
+        <label>Name2</label>
+        <input class="form-control" 
+            name="category" [(ngModel)]="name2" />
+    </div>
+</form>

@@ -1,0 +1,15 @@
+
+<div class="row">
+    <div class="col-6">
+        <app-product-form>I'm child content</app-product-form>
+    </div>
+    <div class="col-6">
+        <app-product-table [testlf] ="testlf"></app-product-table>
+    </div>
+</div>
+
+
+<div class="row">
+    <input class="form-control" style="text-align: center"
+    name="testLifecycle" [(ngModel)]="testlf" />
+</div>
