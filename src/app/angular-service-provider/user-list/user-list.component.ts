@@ -10,12 +10,12 @@ import { UserService } from '../service/user.service';
 export class UserListComponent implements OnInit {
   constructor(private userService: UserService) {
     this.realData = [];
-    this.getRealCovid19Cases();
+    this.init();
   }
 
   realData: User[];
-  getRealCovid19Cases(): void {
-    this.userService.getRealCovid19Cases().subscribe((result) => {
+  init(): void {
+    this.userService.getRealUsers().subscribe((result) => {
       this.realData = result;
     });
   }
@@ -23,9 +23,6 @@ export class UserListComponent implements OnInit {
   getRealData(): User[] {
     return this.realData;
   }
-
-  name1: string;
-  name2: string;
 
   ngOnInit(): void {}
 }

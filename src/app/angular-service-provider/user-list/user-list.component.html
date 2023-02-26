@@ -7,7 +7,7 @@
 <table class="table table-sm table-bordered table-striped">
   <thead>
     <tr>
-      <th></th>
+      <th>No</th>
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
@@ -24,34 +24,3 @@
     </tr>
   </tbody>
 </table>
-
-<form>
-  <div class="form-group">
-    <label>Name1</label>
-    <input
-      class="form-control"
-      #nameInputRef
-      name="name"
-      (input)="name1 = $event.target.value"
-      [value]="name1"
-    />
-  </div>
-  <div class="form-group">
-    <label>Name1</label>
-    <input
-      class="form-control"
-      name="category"
-      (input)="name1 = $event.target.value"
-      [value]="name1"
-    />
-  </div>
-
-  <div class="form-group">
-    <label>Name2</label>
-    <input class="form-control" #nameInputRef name="name" [(ngModel)]="name2" />
-  </div>
-  <div class="form-group">
-    <label>Name2</label>
-    <input class="form-control" name="category" [(ngModel)]="name2" />
-  </div>
-</form>
