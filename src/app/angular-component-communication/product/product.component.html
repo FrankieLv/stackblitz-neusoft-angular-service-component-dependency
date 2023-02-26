@@ -1,15 +1,31 @@
+Product Component:
+<br />
+<br />
 
-<div class="row">
-    <div class="col-6">
-        <app-product-form>I'm child content</app-product-form>
-    </div>
-    <div class="col-6">
-        <app-product-table [testlf] ="testlf"></app-product-table>
-    </div>
+<div class="card">
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label>Test Component Communication</label>
+        <input
+          type="text"
+          class="form-control"
+          name="testIf"
+          [(ngModel)]="testlf"
+        />
+      </div>
+    </form>
+  </div>
 </div>
 
-
+<br />
+<br />
+<br />
 <div class="row">
-    <input class="form-control" style="text-align: center"
-    name="testLifecycle" [(ngModel)]="testlf" />
+  <div class="col-6">
+    <app-product-form>ng-content test: I'm child form</app-product-form>
+  </div>
+  <div class="col-6">
+    <app-product-table [testlf]="testlf"></app-product-table>
+  </div>
 </div>

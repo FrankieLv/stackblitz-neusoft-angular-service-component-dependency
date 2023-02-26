@@ -1,0 +1,57 @@
+<div class="text-left text-white p-2">
+  <a
+    href="https://jsonplaceholder.typicode.com/#:~:text=JSONPlaceholder%20is%20a%20free%20online%20REST%20API%20that,Stack%20Overflow%2C...or%20simply%20to%20test%20things%20locally.%20Resources"
+    >JsonPlaceholder Free API</a
+  >
+</div>
+<table class="table table-sm table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of getRealData(); let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.website }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<form>
+  <div class="form-group">
+    <label>Name1</label>
+    <input
+      class="form-control"
+      #nameInputRef
+      name="name"
+      (input)="name1 = $event.target.value"
+      [value]="name1"
+    />
+  </div>
+  <div class="form-group">
+    <label>Name1</label>
+    <input
+      class="form-control"
+      name="category"
+      (input)="name1 = $event.target.value"
+      [value]="name1"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Name2</label>
+    <input class="form-control" #nameInputRef name="name" [(ngModel)]="name2" />
+  </div>
+  <div class="form-group">
+    <label>Name2</label>
+    <input class="form-control" name="category" [(ngModel)]="name2" />
+  </div>
+</form>

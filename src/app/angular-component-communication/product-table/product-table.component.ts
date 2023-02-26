@@ -5,7 +5,7 @@ import { ProductService } from '../service/product-service.service';
 @Component({
   selector: 'app-product-table',
   templateUrl: './product-table.component.html',
-  styleUrls: ['./product-table.component.css']
+  styleUrls: ['./product-table.component.css'],
 })
 export class ProductTableComponent implements OnInit {
   //constructor(){}
@@ -13,29 +13,27 @@ export class ProductTableComponent implements OnInit {
   // @Input("productService")
   // productService: ProductService;
 
-
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {}
   getProducts(): Product[] {
     return this.productService.getProducts();
   }
 
-  @Input("testlf")
+  @Input('testlf')
   testlf: string;
 
   ngOnChanges(): void {
-    console.log("ProductTableComponent - ngOnchanges():");
+    console.log('ProductTableComponent - ngOnchanges(): testIf:' + this.testlf);
   }
 
   ngOnInit(): void {
-    console.log("ProductTableComponent - ngOnInit():");
+    console.log('ProductTableComponent - ngOnInit():');
   }
 
   ngDoCheck(): void {
-    console.log("ProductTableComponent-component - ngDochek():");
+    console.log('ProductTableComponent-component - ngDochek():');
   }
 
   ngDestroy(): void {
-    console.log("ProductTableComponent-component - ngDesctroy....");
+    console.log('ProductTableComponent-component - ngDesctroy....');
   }
-
 }
